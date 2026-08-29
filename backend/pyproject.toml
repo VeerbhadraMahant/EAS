@@ -1,0 +1,22 @@
+[project]
+name = "eas-backend"
+version = "0.1.0"
+description = "Exam platform: app server + worker (shared codebase, separate entrypoints)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "psycopg[binary]>=3.2",
+    "pydantic-settings>=2.6",
+    "pgvector>=0.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[tool.uv]
+package = false
